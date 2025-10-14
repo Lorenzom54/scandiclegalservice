@@ -11,7 +11,6 @@ export const translations = {
       subtitle: "Expertos en herencias, propiedades e impuestos para no residentes",
       description: "Asesoría legal especializada para extranjeros con más de 10 años de experiencia",
       contactBtn: "Contactar",
-      whatsappBtn: "WhatsApp"
     },
     services: {
       title: "Nuestros Servicios",
@@ -79,7 +78,6 @@ export const translations = {
       message: "Mensaje",
       send: "Enviar mensaje",
       success: "Gracias por contactarnos. Responderemos pronto.",
-      whatsapp: "WhatsApp directo"
     },
     footer: {
       address: "Dirección",
@@ -101,7 +99,6 @@ export const translations = {
       subtitle: "Experts in inheritance, property and taxes for non-residents",
       description: "Specialized legal advice for foreigners with over 10 years of experience",
       contactBtn: "Contact Us",
-      whatsappBtn: "WhatsApp"
     },
     services: {
       title: "Our Services",
@@ -170,7 +167,6 @@ export const translations = {
       message: "Message",
       send: "Send message",
       success: "Thank you for contacting us. We'll respond soon.",
-      whatsapp: "Direct WhatsApp"
     },
     footer: {
       address: "Address",
@@ -192,7 +188,6 @@ export const translations = {
       subtitle: "Eksperter på arv, eiendom og skatt for ikke-residenter",
       description: "Spesialisert juridisk rådgivning for utlendinger med over 10 års erfaring",
       contactBtn: "Kontakt oss",
-      whatsappBtn: "WhatsApp"
     },
     services: {
       title: "Våre Tjenester",
@@ -261,7 +256,6 @@ export const translations = {
       message: "Melding",
       send: "Send melding",
       success: "Takk for at du kontaktet oss. Vi svarer snart.",
-      whatsapp: "Direkte WhatsApp"
     },
     footer: {
       address: "Adresse",
