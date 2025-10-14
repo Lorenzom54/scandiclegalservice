@@ -1,0 +1,82 @@
+---
+---
+
+<div class="relative">
+  <button id="langSelector" class="flex items-center space-x-1 px-3 py-2 text-sm bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+    <span class="text-lg">🌐</span>
+    <span id="currentLang" class="font-medium">ES</span>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  
+  <div id="langDropdown" class="absolute right-0 top-full mt-1 w-20 bg-white border border-gray-300 rounded-md shadow-lg z-50 hidden">
+    <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-gray-50 transition-colors" data-lang="es">ES</button>
+    <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-gray-50 transition-colors" data-lang="en">EN</button>
+    <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-gray-50 transition-colors" data-lang="no">NO</button>
+  </div>
+</div>
+
+<script>
+  import { translations } from '../data/translations.js';
+  
+  // Get current language from localStorage or default to 'es'
+  let currentLang = localStorage.getItem('scandic-lang') || 'es';
+  
+  // Update all text elements with current language
+  function updateLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('scandic-lang', lang);
+    
+    const t = translations[lang];
+    
+    // Update current language display
+    document.getElementById('currentLang').textContent = lang.toUpperCase();
+    
+    // Update all elements with data-i18n attributes
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      const keys = key.split('.');
+      let value = t;
+      
+      for (const k of keys) {
+        value = value[k];
+      }
+      
+      if (value) {
+        if (element.tagName === 'INPUT' && element.type !== 'submit') {
+          element.placeholder = value;
+        } else {
+          element.textContent = value;
+        }
+      }
+    });
+    
+    // Close dropdown
+    document.getElementById('langDropdown').classList.add('hidden');
+  }
+  
+  // Initialize language on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateLanguage(currentLang);
+    
+    // Language selector toggle
+    document.getElementById('langSelector').addEventListener('click', () => {
+      document.getElementById('langDropdown').classList.toggle('hidden');
+    });
+    
+    // Language option selection
+    document.querySelectorAll('.lang-option').forEach(option => {
+      option.addEventListener('click', () => {
+        updateLanguage(option.dataset.lang);
+      });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#langSelector') && !e.target.closest('#langDropdown')) {
+        document.getElementById('langDropdown').classList.add('hidden');
+      }
+    });
+  });
+</script>
