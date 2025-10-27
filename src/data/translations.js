@@ -7,8 +7,8 @@ export const translations = {
       contact: "Contacto"
     },
     hero: {
-      title: "Abogados Noruegos en España que facilitan tus trámites legales",
-      subtitle: "Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales",
+      title: "Trámites legales en España, sin estrés ni riesgos",
+      subtitle: "Asesoría experta para residentes internacionales y propietarios que quieren comprar, heredar o gestionar propiedades con seguridad y rapidez",
       description: "Más de 10 años ayudando a extranjeros a resolver sus gestiones legales en España de forma rápida y segura. Desde compraventas hasta herencias y declaraciones de impuestos, nosotros nos ocupamos de todo.",
       contactBtn: "Contactar",
     },
@@ -104,8 +104,8 @@ export const translations = {
       contact: "Contact"
     },
     hero: {
-      title: "Norwegian Lawyers in Spain who facilitate your legal procedures",
-      subtitle: "Avoid risks and save time in property purchases, inheritances and tax procedures",
+      title: "Legal procedures in Spain, without stress or risks",
+      subtitle: "Expert advice for international residents and property owners who want to buy, inherit or manage properties safely and quickly",
       description: "Over 10 years helping foreigners resolve their legal matters in Spain quickly and safely. From property sales to inheritances and tax returns, we take care of everything.",
       contactBtn: "Contact Us",
     },
@@ -202,8 +202,8 @@ export const translations = {
       contact: "Kontakt"
     },
     hero: {
-      title: "Norske Advokater i Spania som forenkler dine juridiske prosedyrer",
-      subtitle: "Unngå risikoer og spar tid på eiendomskjøp, arv og skatteprosedyrer",
+      title: "Juridiske prosedyrer i Spania, uten stress eller risikoer",
+      subtitle: "Ekspert rådgivning for internasjonale beboere og eiendomsbesittere som ønsker å kjøpe, arve eller administrere eiendommer trygt og raskt",
       description: "Over 10 år med å hjelpe utlendinger med å løse sine juridiske saker i Spania raskt og sikkert. Fra eiendomssalg til arv og selvangivelser, vi tar oss av alt.",
       contactBtn: "Kontakt oss",
     },
