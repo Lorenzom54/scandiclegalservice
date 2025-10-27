@@ -7,7 +7,7 @@
     <img 
       src="/img/hero.png" 
       alt="Norwegian legal documents and flag" 
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover object-center sm:object-center md:object-center lg:object-center"
     />
   </div>
   
@@ -15,34 +15,72 @@
   <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
     <div class="animate-fade-in">
       <!-- Contact Button at the top -->
-      <div class="mb-8">
+      <div class="mb-6 sm:mb-8">
         <a 
           href="https://cloud-s23.mnprogram.net/Index.aspx?frm=DAF6F06B-7DA0-49A9-B613-887B49F5B84B" 
           target="_blank"
-          class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+          class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
         >
           <span data-i18n="hero.contactBtn">Contactar</span>
         </a>
       </div>
       
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
         <span data-i18n="hero.title">Abogados Noruegos en España</span>
       </h1>
       
-      <h2 class="text-xl md:text-2xl mb-8 text-gray-200 font-light">
+      <h2 class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-200 font-light">
         <span data-i18n="hero.subtitle">Expertos en herencias, propiedades e impuestos para no residentes</span>
       </h2>
       
-      <p class="text-lg md:text-xl mb-12 text-gray-300 max-w-3xl mx-auto">
+      <p class="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-300 max-w-3xl mx-auto">
         <span data-i18n="hero.description">Asesoría legal especializada para extranjeros con más de 10 años de experiencia</span>
       </p>
     </div>
   </div>
   
   <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
     </svg>
   </div>
 </section>
+
+<style>
+  /* Optimizaciones para móviles */
+  @media (max-width: 640px) {
+    #home {
+      min-height: 100vh;
+      padding-top: 5rem; /* Espacio para el header fijo */
+    }
+    
+    #home img {
+      object-position: center center;
+    }
+  }
+  
+  /* Mejoras para tablets */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    #home {
+      min-height: 100vh;
+      padding-top: 6rem;
+    }
+  }
+  
+  /* Animación de fade-in mejorada */
+  .animate-fade-in {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
