@@ -7,16 +7,18 @@ export const translations = {
       contact: "Contacto"
     },
     hero: {
-      title: "Abogados Noruegos en España",
-      subtitle: "Expertos en herencias, propiedades e impuestos para no residentes",
-      description: "Asesoría legal especializada para extranjeros con más de 10 años de experiencia",
+      title: "Abogados Noruegos en España que facilitan tus trámites legales",
+      subtitle: "Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales",
+      description: "Más de 10 años ayudando a extranjeros a resolver sus gestiones legales en España de forma rápida y segura. Desde compraventas hasta herencias y declaraciones de impuestos, nosotros nos ocupamos de todo.",
       contactBtn: "Contactar",
     },
     services: {
-      title: "Nuestros Servicios",
-      subtitle: "Asesoría legal especializada para extranjeros",
+      title: "Soluciones legales",
+      subtitle: "Nos encargamos de los trámites que más te preocupan",
       tax: {
-        title: "Fiscalidad",
+        title: "Fiscalidad y Declaraciones",
+        problem: "Evitar sanciones y complicaciones fiscales en España",
+        solution: "Declaración de no residentes, Modelo 720, Planificación fiscal internacional, Impuesto de sucesiones y donaciones",
         items: [
           "Declaración de no residentes",
           "Modelo 720 - Bienes en el extranjero", 
@@ -24,8 +26,10 @@ export const translations = {
           "Impuesto de sucesiones y donaciones"
         ]
       },
-      property: {
-        title: "Inmobiliario",
+        property: {
+          title: "Inmobiliario y Propiedades",
+          problem: "Comprar o vender una propiedad puede ser confuso y arriesgado",
+          solution: "Compraventa de propiedades, Asesoramiento hipotecario, Registro de la propiedad, Licencias y permisos",
         items: [
           "Compraventa de propiedades",
           "Asesoramiento hipotecario",
@@ -33,8 +37,10 @@ export const translations = {
           "Licencias y permisos"
         ]
       },
-      inheritance: {
-        title: "Herencias y Testamentos",
+        inheritance: {
+          title: "Herencias y Testamentos",
+          problem: "Garantizar que tu patrimonio llegue a tus herederos sin conflictos",
+          solution: "Redacción de testamentos, Tramitación de herencias, Certificados de últimas voluntades, Partición de bienes",
         items: [
           "Redacción de testamentos",
           "Tramitación de herencias",
@@ -42,8 +48,10 @@ export const translations = {
           "Partición de bienes"
         ]
       },
-      general: {
-        title: "Otros Servicios",
+        general: {
+          title: "Otros Servicios Esenciales",
+          problem: "Gestiones legales que parecen complicadas y que no quieres arriesgar",
+          solution: "Obtención de NIE, Poderes notariales, Disolución de sociedades, Asesoramiento general",
         items: [
           "Obtención de NIE",
           "Poderes notariales",
@@ -62,6 +70,7 @@ export const translations = {
       hourly: "Tarifa por hora",
       hourlyPrice: "100€ + IVA",
       services: "Servicios con tarifa fija",
+      servicesNote: "Así sabes cuánto te costará tu trámite antes de empezar.",
       servicesList: [
         "Testamentos: desde 200€",
         "Declaración no residentes: 150€",
@@ -70,7 +79,7 @@ export const translations = {
       ],
     },
     contact: {
-      title: "Contacto",
+      title: "Resuelve tu trámite hoy",
       subtitle: "Responderemos en menos de 24 horas",
       name: "Nombre",
       email: "Correo electrónico",
@@ -95,16 +104,18 @@ export const translations = {
       contact: "Contact"
     },
     hero: {
-      title: "Norwegian Lawyers in Spain",
-      subtitle: "Experts in inheritance, property and taxes for non-residents",
-      description: "Specialized legal advice for foreigners with over 10 years of experience",
+      title: "Norwegian Lawyers in Spain who facilitate your legal procedures",
+      subtitle: "Avoid risks and save time in property purchases, inheritances and tax procedures",
+      description: "Over 10 years helping foreigners resolve their legal matters in Spain quickly and safely. From property sales to inheritances and tax returns, we take care of everything.",
       contactBtn: "Contact Us",
     },
     services: {
-      title: "Our Services",
-      subtitle: "Specialized legal advice for foreigners",
+      title: "Legal solutions",
+      subtitle: "We take care of the procedures that worry you most",
       tax: {
-        title: "Tax Law",
+        title: "Taxation and Declarations",
+        problem: "Avoid penalties and tax complications in Spain",
+        solution: "Non-resident tax returns, Model 720, International tax planning, Inheritance and gift tax",
         items: [
           "Non-resident tax returns",
           "Model 720 - Assets abroad",
@@ -112,8 +123,10 @@ export const translations = {
           "Inheritance and gift tax"
         ]
       },
-      property: {
-        title: "Real Estate",
+        property: {
+          title: "Real Estate and Properties",
+          problem: "Buying or selling a property can be confusing and risky",
+          solution: "Property sales and purchases, Mortgage advice, Property registry, Licenses and permits",
         items: [
           "Property sales and purchases",
           "Mortgage advice",
@@ -121,8 +134,10 @@ export const translations = {
           "Licenses and permits"
         ]
       },
-      inheritance: {
-        title: "Inheritance & Wills",
+        inheritance: {
+          title: "Inheritance & Wills",
+          problem: "Ensure your assets reach your heirs without conflicts",
+          solution: "Will drafting, Inheritance procedures, Last will certificates, Asset division",
         items: [
           "Will drafting",
           "Inheritance procedures",
@@ -130,8 +145,10 @@ export const translations = {
           "Asset division"
         ]
       },
-      general: {
-        title: "Other Services",
+        general: {
+          title: "Other Essential Services",
+          problem: "Legal procedures that seem complicated and you don't want to risk",
+          solution: "NIE applications, Powers of attorney, Company dissolution, General advice",
         items: [
           "NIE applications",
           "Powers of attorney",
@@ -150,6 +167,7 @@ export const translations = {
       hourly: "Hourly rate",
       hourlyPrice: "100€ + VAT",
       services: "Fixed-rate services",
+      servicesNote: "This way you know how much your procedure will cost before starting.",
       servicesList: [
         "Wills: from 200€",
         "Non-resident returns: 150€",
@@ -159,7 +177,7 @@ export const translations = {
       note: "For large projects we sign contracts with advance payment"
     },
     contact: {
-      title: "Contact",
+      title: "Resolve your procedure today",
       subtitle: "We'll respond within 24 hours",
       name: "Name",
       email: "Email address",
@@ -184,16 +202,18 @@ export const translations = {
       contact: "Kontakt"
     },
     hero: {
-      title: "Norske Advokater i Spania",
-      subtitle: "Eksperter på arv, eiendom og skatt for ikke-residenter",
-      description: "Spesialisert juridisk rådgivning for utlendinger med over 10 års erfaring",
+      title: "Norske Advokater i Spania som forenkler dine juridiske prosedyrer",
+      subtitle: "Unngå risikoer og spar tid på eiendomskjøp, arv og skatteprosedyrer",
+      description: "Over 10 år med å hjelpe utlendinger med å løse sine juridiske saker i Spania raskt og sikkert. Fra eiendomssalg til arv og selvangivelser, vi tar oss av alt.",
       contactBtn: "Kontakt oss",
     },
     services: {
-      title: "Våre Tjenester",
-      subtitle: "Spesialisert juridisk rådgivning for utlendinger",
+      title: "Juridiske løsninger",
+      subtitle: "Vi tar oss av prosedyrene som bekymrer deg mest",
       tax: {
-        title: "Skatterett",
+        title: "Skatter og Erklæringer",
+        problem: "Unngå bøter og skattekomplikasjoner i Spania",
+        solution: "Ikke-resident selvangivelse, Modell 720, Internasjonal skatteplanlegging, Arve- og gaveskatt",
         items: [
           "Ikke-resident selvangivelse",
           "Modell 720 - Eiendeler i utlandet",
@@ -201,8 +221,10 @@ export const translations = {
           "Arve- og gaveskatt"
         ]
       },
-      property: {
-        title: "Eiendom",
+        property: {
+          title: "Eiendom og Boliger",
+          problem: "Å kjøpe eller selge en eiendom kan være forvirrende og risikabelt",
+          solution: "Eiendomskjøp og salg, Lånerådgivning, Eiendomsregister, Lisenser og tillatelser",
         items: [
           "Eiendomskjøp og salg",
           "Lånerådgivning",
@@ -210,8 +232,10 @@ export const translations = {
           "Lisenser og tillatelser"
         ]
       },
-      inheritance: {
-        title: "Arv og Testament",
+        inheritance: {
+          title: "Arv og Testament",
+          problem: "Sikre at dine eiendeler når dine arvinger uten konflikter",
+          solution: "Testamentopprettelse, Arveprosedyrer, Siste vilje sertifikater, Eiendelsdeling",
         items: [
           "Testamentopprettelse",
           "Arveprosedyrer",
@@ -219,8 +243,10 @@ export const translations = {
           "Eiendelsdeling"
         ]
       },
-      general: {
-        title: "Andre Tjenester",
+        general: {
+          title: "Andre Essensielle Tjenester",
+          problem: "Juridiske prosedyrer som virker kompliserte og du ikke vil risikere",
+          solution: "NIE søknader, Fullmakter, Selskapsoppløsning, Generell rådgivning",
         items: [
           "NIE søknader",
           "Fullmakter",
@@ -239,6 +265,7 @@ export const translations = {
       hourly: "Timesbetaling",
       hourlyPrice: "100€ + mva",
       services: "Tjenester med fast pris",
+      servicesNote: "På denne måten vet du hvor mye prosedyren din vil koste før du starter.",
       servicesList: [
         "Testament: fra 200€",
         "Ikke-resident selvangivelse: 150€",
@@ -248,7 +275,7 @@ export const translations = {
       note: "For store prosjekter signerer vi kontrakter med forskuddsbetaling"
     },
     contact: {
-      title: "Kontakt",
+      title: "Løs prosedyren din i dag",
       subtitle: "Vi svarer innen 24 timer",
       name: "Navn",
       email: "E-postadresse",
