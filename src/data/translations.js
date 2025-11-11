@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       services: "Servicios",
       about: "Nosotros",
-      howWeWork: "Cómo Trabajamos",
+      howWeWork: "Tu proceso legal",
       faq: "FAQ",
       pricing: "Precios",
       contact: "Contacto"
@@ -102,7 +102,7 @@ export const translations = {
     nav: {
       services: "Sesrvices", 
       about: "About",
-      howWeWork: "How We Work",
+      howWeWork: "Your Legal Process",
       faq: "FAQ",
       pricing: "Pricing",
       contact: "Contact"
@@ -202,7 +202,7 @@ export const translations = {
     nav: {
       services: "Tjsenester",
       about: "Om oss",
-      howWeWork: "Hvordan vi jobber",
+      howWeWork: "Din juridiske prosess",
       faq: "FAQ",
       pricing: "Priser",
       contact: "Kontakt"
