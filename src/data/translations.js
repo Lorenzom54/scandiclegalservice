@@ -3,6 +3,8 @@ export const translations = {
     nav: {
       services: "Servicios",
       about: "Nosotros",
+      howWeWork: "Cómo Trabajamos",
+      faq: "FAQ",
       pricing: "Precios",
       contact: "Contacto"
     },
@@ -100,6 +102,8 @@ export const translations = {
     nav: {
       services: "Sesrvices", 
       about: "About",
+      howWeWork: "How We Work",
+      faq: "FAQ",
       pricing: "Pricing",
       contact: "Contact"
     },
@@ -197,7 +201,9 @@ export const translations = {
   no: {
     nav: {
       services: "Tjsenester",
-      about: "Om oss", 
+      about: "Om oss",
+      howWeWork: "Hvordan vi jobber",
+      faq: "FAQ",
       pricing: "Priser",
       contact: "Kontakt"
     },
