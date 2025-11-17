@@ -9,6 +9,7 @@ export const translations = {
       contact: "Contacto"
     },
     hero: {
+      mainTitle: "Ayudamos a noruegos<br>a comprar propiedades en España<br>sin sorpresas",
       title: "Trámites legales en España, sin estrés ni riesgos",
       subtitle: "Asesoría experta para residentes internacionales y propietarios que quieren comprar, heredar o gestionar propiedades con seguridad y rapidez",
       description: "Más de 10 años ayudando a extranjeros a resolver sus gestiones legales en España de forma rápida y segura. Desde compraventas hasta herencias y declaraciones de impuestos, nosotros nos ocupamos de todo.",
@@ -108,6 +109,7 @@ export const translations = {
       contact: "Contact"
     },
     hero: {
+      mainTitle: "We help Norwegians<br>buy property in Spain<br>without surprises",
       title: "Legal procedures in Spain, without stress or risks",
       subtitle: "Expert advice for international residents and property owners who want to buy, inherit or manage properties safely and quickly",
       description: "Over 10 years helping foreigners resolve their legal matters in Spain quickly and safely. From property sales to inheritances and tax returns, we take care of everything.",
@@ -208,6 +210,7 @@ export const translations = {
       contact: "Kontakt"
     },
     hero: {
+      mainTitle: "Vi hjelper nordmenn<br>med å kjøpe eiendom i Spania<br>uten overraskelser",
       title: "Juridiske prosedyrer i Spania, uten stress eller risikoer",
       subtitle: "Ekspert rådgivning for internasjonale beboere og eiendomsbesittere som ønsker å kjøpe, arve eller administrere eiendommer trygt og raskt",
       description: "Over 10 år med å hjelpe utlendinger med å løse sine juridiske saker i Spania raskt og sikkert. Fra eiendomssalg til arv og selvangivelser, vi tar oss av alt.",

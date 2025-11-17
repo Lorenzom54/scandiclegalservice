@@ -1,53 +1,136 @@
 ---
 ---
 
-<section id="home" class="relative min-h-screen flex items-center justify-center">
-  <!-- Background Color -->
-  <div class="absolute inset-0" style="background-color: #73052f;"></div>
+<section id="home" class="hero-background relative w-full h-screen flex items-center">
+  <!-- Imagen para móvil (solo visible en móvil) -->
+  <div class="mobile-hero-image"></div>
   
-  <!-- Content -->
-  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+  <!-- Content Container -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="animate-fade-in">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-        <span data-i18n="hero.title">Trámites legales en España, sin estrés ni riesgos</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-gray-800 text-left" data-i18n="hero.mainTitle">
+        We help Norwegians<br>
+        buy property in Spain<br>
+        without surprises
       </h1>
-      
-      <h2 class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-200 font-light">
-        <span data-i18n="hero.subtitle">Asesoría experta para residentes internacionales y propietarios que quieren comprar, heredar o gestionar propiedades con seguridad y rapidez</span>
-      </h2>
-      
-      <p class="text-base sm:text-lg md:text-xl mb-8 sm:mb-12 text-gray-300 max-w-3xl mx-auto">
-        <span data-i18n="hero.description">Más de 10 años ayudando a extranjeros a resolver sus gestiones legales en España de forma rápida y segura. Desde compraventas hasta herencias y declaraciones de impuestos, nosotros nos ocupamos de todo.</span>
-      </p>
     </div>
   </div>
   
   <!-- Scroll indicator -->
-  <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
     </svg>
   </div>
 </section>
 
 <style>
+  /* Fondo base crema */
+  .hero-background {
+    background-color: #faf8f5;
+  }
+  
+  /* Imagen de fondo - más pequeña en desktop */
+  .hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-image: url('/img/arneegood.png');
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  
+  /* Imagen para móvil - visible solo en móviles */
+  .mobile-hero-image {
+    display: none;
+  }
+  
   /* Optimizaciones para móviles */
   @media (max-width: 640px) {
     #home {
       min-height: 100vh;
-      padding-top: 5rem; /* Espacio para el header fijo */
+      height: auto;
+      padding-top: 0;
+      padding-bottom: 3rem;
+      flex-direction: column;
+      justify-content: flex-start;
     }
     
-    #home img {
-      object-position: center center;
+    /* Ocultar el pseudo-elemento en móvil */
+    .hero-background::before {
+      display: none;
+    }
+    
+    /* Mostrar imagen móvil - persona centrada, recortando la izquierda */
+    .mobile-hero-image {
+      display: block;
+      width: 100%;
+      height: 50vh;
+      min-height: 350px;
+      max-height: 500px;
+      background-image: url('/img/arneegood.png');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      margin-top: 5rem; /* Espacio para el header fijo */
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    
+    #home .relative {
+      position: relative;
+      z-index: 10;
+      padding-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+    
+    #home h1 {
+      font-size: 2rem;
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 100%;
     }
   }
   
   /* Mejoras para tablets */
   @media (min-width: 641px) and (max-width: 1024px) {
     #home {
-      min-height: 100vh;
+      height: 100vh;
       padding-top: 6rem;
+    }
+    
+    .hero-background::before {
+      width: 90%;
+    }
+    
+    #home h1 {
+      font-size: 4rem;
+      text-align: left;
+      max-width: 52%;
+    }
+  }
+  
+  /* Desktop - imagen más pequeña */
+  @media (min-width: 1025px) {
+    #home {
+      height: 100vh;
+    }
+    
+    .hero-background::before {
+      width: 66%;
+    }
+    
+    #home h1 {
+      text-align: left;
+      max-width: 75%;
     }
   }
   
