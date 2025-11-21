@@ -1,16 +1,16 @@
 ---
 ---
 
-<div class="relative">
-  <button id="langSelector" class="flex items-center space-x-1 px-3 py-2 text-sm bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+<div class="relative language-selector-wrapper">
+  <button class="lang-selector-btn flex items-center space-x-1 px-3 py-2 text-sm bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
     <span class="text-lg">🌐</span>
-    <span id="currentLang" class="font-medium">NO</span>
+    <span class="current-lang font-medium">NO</span>
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
     </svg>
   </button>
   
-  <div id="langDropdown" class="absolute right-0 top-full mt-1 w-20 bg-white border border-gray-300 rounded-md shadow-lg z-50 hidden">
+  <div class="lang-dropdown absolute right-0 top-full mt-1 w-20 bg-white border border-gray-300 rounded-md shadow-lg z-50 hidden">
     <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-gray-50 transition-colors" data-lang="es">ES</button>
     <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-gray-50 transition-colors" data-lang="en">EN</button>
     <button class="lang-option w-full px-3 py-2 text-left text-sm hover:bg-gray-50 transition-colors" data-lang="no">NO</button>
@@ -30,8 +30,10 @@
     
     const t = translations[lang];
     
-    // Update current language display
-    document.getElementById('currentLang').textContent = lang.toUpperCase();
+    // Update current language display in all selectors
+    document.querySelectorAll('.current-lang').forEach(element => {
+      element.textContent = lang.toUpperCase();
+    });
     
     // Update all elements with data-i18n attributes
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -57,30 +59,49 @@
       }
     });
     
-    // Close dropdown
-    document.getElementById('langDropdown').classList.add('hidden');
+    // Close all dropdowns
+    document.querySelectorAll('.lang-dropdown').forEach(dropdown => {
+      dropdown.classList.add('hidden');
+    });
   }
   
   // Initialize language on page load
   document.addEventListener('DOMContentLoaded', () => {
+    // Set initial language display
     updateLanguage(currentLang);
     
-    // Language selector toggle
-    document.getElementById('langSelector').addEventListener('click', () => {
-      document.getElementById('langDropdown').classList.toggle('hidden');
-    });
-    
-    // Language option selection
-    document.querySelectorAll('.lang-option').forEach(option => {
-      option.addEventListener('click', () => {
-        updateLanguage(option.dataset.lang);
-      });
+    // Setup each language selector instance
+    document.querySelectorAll('.language-selector-wrapper').forEach(wrapper => {
+      const selectorBtn = wrapper.querySelector('.lang-selector-btn');
+      const dropdown = wrapper.querySelector('.lang-dropdown');
+      const currentLangSpan = wrapper.querySelector('.current-lang');
+      
+      if (selectorBtn && dropdown && currentLangSpan) {
+        // Set initial language display for this instance
+        currentLangSpan.textContent = currentLang.toUpperCase();
+        
+        // Language selector toggle
+        selectorBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle('hidden');
+        });
+        
+        // Language option selection
+        wrapper.querySelectorAll('.lang-option').forEach(option => {
+          option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateLanguage(option.dataset.lang);
+          });
+        });
+      }
     });
     
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('#langSelector') && !e.target.closest('#langDropdown')) {
-        document.getElementById('langDropdown').classList.add('hidden');
+      if (!e.target.closest('.language-selector-wrapper')) {
+        document.querySelectorAll('.lang-dropdown').forEach(dropdown => {
+          dropdown.classList.add('hidden');
+        });
       }
     });
   });

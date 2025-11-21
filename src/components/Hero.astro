@@ -3,16 +3,36 @@
 
 <section id="home" class="hero-background relative w-full h-screen flex items-center">
   <!-- Imagen para móvil (solo visible en móvil) -->
-  <div class="mobile-hero-image"></div>
+  <div class="mobile-hero-image">
+    <!-- Overlay oscuro para legibilidad del texto -->
+    <div class="mobile-hero-overlay"></div>
+    
+    <!-- Contenido superpuesto sobre la imagen (solo móvil) -->
+    <div class="mobile-hero-content">
+      <!-- Texto sobre la imagen -->
+      <h1 class="mobile-hero-title" data-i18n="hero.mainTitle">
+        Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales
+      </h1>
+      
+      <!-- Botón de contacto móvil -->
+      <a 
+        href="https://cloud-s23.mnprogram.net/Index.aspx?frm=DAF6F06B-7DA0-49A9-B613-887B49F5B84B" 
+        target="_blank"
+        class="mobile-hero-cta"
+      >
+        <span data-i18n="hero.contactBtn">Contactar</span>
+      </a>
+    </div>
+  </div>
   
-  <!-- Content Container -->
+  <!-- Content Container (desktop) -->
   <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="animate-fade-in">
       <!-- OPCIÓN 1: Logo debajo del título (RECOMENDADO) -->
-      <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800 text-left" data-i18n="hero.mainTitle">
+      <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800 text-left desktop-hero-title" data-i18n="hero.mainTitle">
         Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales
       </h1>
-      <div class="hero-logo mt-6 sm:mt-8">
+      <div class="hero-logo mt-6 sm:mt-8 hidden md:block">
         <img src="/logo.png" alt="Scandic Legal Service" class="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 w-auto object-contain">
       </div>
       
@@ -65,7 +85,7 @@
 <style>
   /* Fondo base crema */
   .hero-background {
-    background-color: #faf8f5;
+    background-color: #fdf7f1;
   }
   
   /* Imagen de fondo - optimizada para desktop */
@@ -88,13 +108,18 @@
     display: none;
   }
   
+  /* Logo móvil entre imagen y texto - oculto por defecto */
+  .mobile-hero-logo {
+    display: none;
+  }
+  
   /* Optimizaciones para móviles */
   @media (max-width: 640px) {
     #home {
       min-height: 100vh;
-      height: auto;
+      height: 100vh;
       padding-top: 0;
-      padding-bottom: 3rem;
+      padding-bottom: 0;
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -104,38 +129,129 @@
       display: none;
     }
     
-    /* Mostrar imagen móvil - optimizada para móvil */
+    /* Mostrar imagen móvil - optimizada para móvil con contenido superpuesto */
     .mobile-hero-image {
       display: block;
+      position: relative;
       width: 100%;
-      height: 45vh;
-      min-height: 300px;
-      max-height: 450px;
+      height: 100vh;
+      min-height: 100vh;
       background-image: url('/img/hero1.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      margin-top: 5rem; /* Espacio para el header fijo */
-      margin-bottom: 2rem;
+      margin-top: 0;
+      margin-bottom: 0;
       overflow: hidden;
       border-radius: 0;
     }
     
-    #home .relative {
-      position: relative;
-      z-index: 10;
-      padding-top: 1rem;
-      width: 100%;
+    /* Overlay oscuro para legibilidad */
+    .mobile-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+      z-index: 1;
+      border-radius: 0;
+    }
+    
+    /* Contenedor del contenido superpuesto */
+    .mobile-hero-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem 1.5rem 2rem;
+      z-index: 2;
       text-align: center;
     }
     
-    #home h1 {
-      font-size: 2rem;
+    
+    /* Título sobre la imagen */
+    .mobile-hero-title {
+      font-size: 1.75rem;
       line-height: 1.3;
+      font-weight: 700;
+      color: white;
       text-align: center;
-      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
       width: 100%;
       max-width: 100%;
+      margin: 0 0 2rem 0;
+      animation: fadeInUp 1.4s ease-out;
+    }
+    
+    /* Botón de contacto móvil */
+    .mobile-hero-cta {
+      display: inline-block;
+      background: white;
+      color: #740530;
+      padding: 1rem 2.5rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      font-size: 1.125rem;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.6s ease-out;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+    }
+    
+    .mobile-hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .mobile-hero-cta:active {
+      transform: translateY(0);
+    }
+    
+    /* Ocultar contenido desktop en móvil */
+    .desktop-hero-title {
+      display: none;
+    }
+    
+    /* Ocultar logo debajo del texto en móvil */
+    .hero-logo {
+      display: none !important;
+    }
+    
+    .hero-logo img {
+      display: none !important;
+    }
+    
+    #home .relative {
+      display: none;
+    }
+  }
+  
+  /* Mostrar contenido desktop desde tablet */
+  @media (min-width: 641px) {
+    .mobile-hero-image,
+    .mobile-hero-overlay,
+    .mobile-hero-content,
+    .mobile-hero-logo,
+    .mobile-hero-title {
+      display: none;
+    }
+    
+    .desktop-hero-title {
+      display: block;
+    }
+    
+    #home .relative {
+      display: block;
     }
   }
   
