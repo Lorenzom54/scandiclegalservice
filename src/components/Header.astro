@@ -6,8 +6,8 @@ import LanguageSelector from './LanguageSelector.astro';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-24 sm:h-24 lg:h-28 xl:h-32">
       <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href="#home" class="flex items-center">
+      <div class="flex-shrink-0 header-logo">
+        <a href="/#home" class="flex items-center">
           <div class="w-24 h-24 sm:w-20 sm:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 rounded-md flex items-center justify-center">
            <img src="/logo.png" alt="" class="w-full h-full object-contain">
           </div>
@@ -16,15 +16,14 @@ import LanguageSelector from './LanguageSelector.astro';
       
       <!-- Navigation - Hidden on mobile, visible on desktop -->
       <nav class="hidden md:flex space-x-8">
-        <a href="#services" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.services">Servicios</a>
-        <a href="#about" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.about">Nosotros</a>
-        <a href="#how-we-work" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.howWeWork">Cómo Trabajamos</a>
-        <a href="#faq" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.faq">FAQ</a>
-        <!-- <a href="#pricing" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.pricing">Precios</a> -->
+        <a href="/#services" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.services">Servicios</a>
+        <a href="/#about" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.about">Nosotros</a>
+        <a href="/#faq" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.faq">FAQ</a>
+        <!-- <a href="/#pricing" class="nav-link text-dark hover:text-primary transition-colors" data-i18n="nav.pricing">Precios</a> -->
       </nav>
       
-      <!-- Contact Button and Language Selector -->
-      <div class="flex items-center space-x-4">
+      <!-- Contact Button and Language Selector - Hidden on mobile -->
+      <div class="hidden md:flex items-center space-x-4">
         <a 
           href="https://cloud-s23.mnprogram.net/Index.aspx?frm=DAF6F06B-7DA0-49A9-B613-887B49F5B84B" 
           target="_blank"
@@ -34,6 +33,64 @@ import LanguageSelector from './LanguageSelector.astro';
         </a>
         <LanguageSelector />
       </div>
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden flex items-center justify-center w-10 h-10 text-gray-800 hover:text-primary transition-colors"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div 
+      id="mobile-menu"
+      class="md:hidden hidden border-t border-gray-200 bg-white"
+    >
+      <nav class="px-4 py-6 space-y-4">
+        <a 
+          href="/#services" 
+          class="mobile-nav-link block py-3 text-dark hover:text-primary transition-colors font-medium"
+          data-i18n="nav.services"
+        >
+          Servicios
+        </a>
+        <a 
+          href="/#about" 
+          class="mobile-nav-link block py-3 text-dark hover:text-primary transition-colors font-medium"
+          data-i18n="nav.about"
+        >
+          Nosotros
+        </a>
+        <a 
+          href="/#faq" 
+          class="mobile-nav-link block py-3 text-dark hover:text-primary transition-colors font-medium"
+          data-i18n="nav.faq"
+        >
+          FAQ
+        </a>
+        <div class="pt-4 border-t border-gray-200 space-y-4">
+          <a 
+            href="https://cloud-s23.mnprogram.net/Index.aspx?frm=DAF6F06B-7DA0-49A9-B613-887B49F5B84B" 
+            target="_blank"
+            class="block w-full bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-lg"
+          >
+            <span data-i18n="hero.contactBtn">Contactar</span>
+          </a>
+          <div class="flex justify-center">
+            <LanguageSelector />
+          </div>
+        </div>
+      </nav>
+    </div>
     </div>
   </div>
 </header>
@@ -58,28 +115,211 @@ import LanguageSelector from './LanguageSelector.astro';
   .nav-link:hover::after {
     width: 100%;
   }
+  
+  /* Ocultar logo del header cuando estamos en el hero */
+  .header-logo.hide-logo {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .header-logo {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Mobile Menu Styles */
+  #mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+  }
+  
+  #mobile-menu.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+  
+  .mobile-nav-link {
+    position: relative;
+  }
+  
+  .mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #740530;
+    transition: width 0.3s ease;
+  }
+  
+  .mobile-nav-link:hover::after {
+    width: 100%;
+  }
 </style>
 
 <script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const href = anchor.getAttribute('href');
-      if (href) {
-        const target = document.querySelector(href);
-        if (target) {
-          const headerElement = document.querySelector('header');
-          const headerOffset = headerElement ? headerElement.offsetHeight + 20 : 100;
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  document.addEventListener('DOMContentLoaded', function() {
+    // Función para cerrar el menú móvil
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      
+      if (mobileMenu && menuIcon && closeIcon && mobileMenuButton) {
+        mobileMenu.classList.remove('open');
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    }
+    
+    // Smooth scrolling for navigation links
+    function setupSmoothScrolling() {
+      document.querySelectorAll('a[href^="/#"], a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          
+          // No hacer preventDefault si es solo #
+          if (href === '#' || !href) {
+            return;
+          }
+          
+          e.preventDefault();
+          
+          // Detectar si estamos en la página principal o en una subpágina
+          const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+          const hash = href.includes('#') ? href.split('#')[1] : null;
+          
+          if (!hash) {
+            return;
+          }
+          
+          // Si estamos en una subpágina, navegar primero a la página principal
+          if (!isHomePage) {
+            // Guardar el hash en sessionStorage para hacer scroll después de cargar
+            sessionStorage.setItem('scrollTo', hash);
+            window.location.href = '/#' + hash;
+            return;
+          }
+          
+          // Si estamos en la página principal, hacer scroll directamente
+          const target = document.querySelector('#' + hash);
+          if (target) {
+            const headerElement = document.querySelector('header');
+            const headerOffset = headerElement ? headerElement.offsetHeight + 20 : 100;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            
+            // Cerrar menú móvil después de navegar
+            setTimeout(closeMobileMenu, 300);
+          }
+        });
+      });
+      
+      // Si hay un hash guardado en sessionStorage, hacer scroll después de cargar
+      const scrollToHash = sessionStorage.getItem('scrollTo');
+      if (scrollToHash && (window.location.pathname === '/' || window.location.pathname === '/index.html')) {
+        sessionStorage.removeItem('scrollTo');
+        setTimeout(() => {
+          const target = document.querySelector('#' + scrollToHash);
+          if (target) {
+            const headerElement = document.querySelector('header');
+            const headerOffset = headerElement ? headerElement.offsetHeight + 20 : 100;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      }
+      
+      // También manejar hash directo en la URL al cargar la página
+      if (window.location.hash && (window.location.pathname === '/' || window.location.pathname === '/index.html')) {
+        setTimeout(() => {
+          const hash = window.location.hash.substring(1);
+          const target = document.querySelector('#' + hash);
+          if (target) {
+            const headerElement = document.querySelector('header');
+            const headerOffset = headerElement ? headerElement.offsetHeight + 20 : 100;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      }
+    }
+    
+    // Inicializar smooth scrolling
+    setupSmoothScrolling();
+    
+    // Ocultar logo del header cuando estamos en el hero
+    function toggleHeaderLogo() {
+      const headerLogo = document.querySelector('.header-logo');
+      const heroSection = document.querySelector('#home');
+      
+      if (headerLogo && heroSection) {
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const heroHeight = heroSection.offsetHeight;
+        
+        // Ocultar logo si estamos en la parte superior (dentro del hero)
+        // Mostrar logo cuando hemos scrolleado más del 80% del hero
+        if (scrollPosition < heroHeight * 0.8) {
+          headerLogo.classList.add('hide-logo');
+        } else {
+          headerLogo.classList.remove('hide-logo');
         }
       }
-    });
+    }
+    
+    // Ejecutar al cargar y al hacer scroll
+    toggleHeaderLogo();
+    window.addEventListener('scroll', toggleHeaderLogo);
+    window.addEventListener('resize', toggleHeaderLogo);
+    
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    
+    if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+      mobileMenuButton.addEventListener('click', function() {
+        const isOpen = mobileMenu.classList.contains('open');
+        
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          mobileMenu.classList.remove('hidden');
+          mobileMenu.classList.add('open');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'true');
+        }
+      });
+      
+      // Cerrar menú al redimensionar a desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+          closeMobileMenu();
+        }
+      });
+    }
   });
 </script>

@@ -8,13 +8,51 @@
   <!-- Content Container -->
   <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="animate-fade-in">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-gray-800 text-left" data-i18n="hero.mainTitle">
-        We help Norwegians<br>
-        buy property in Spain<br>
-        without surprises
+      <!-- OPCIÓN 1: Logo debajo del título (RECOMENDADO) -->
+      <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800 text-left" data-i18n="hero.mainTitle">
+        Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales
       </h1>
+      <div class="hero-logo mt-6 sm:mt-8">
+        <img src="/logo.png" alt="Scandic Legal Service" class="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 w-auto object-contain">
+      </div>
+      
+      <!-- OPCIÓN 2: Logo encima del título (descomentar para usar) -->
+      <!--
+      <div class="hero-logo mb-6 sm:mb-8">
+        <img src="/logo.png" alt="Scandic Legal Service" class="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain">
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800 text-left" data-i18n="hero.mainTitle">
+        Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales
+      </h1>
+      -->
+      
+      <!-- OPCIÓN 3: Logo a la izquierda del título (descomentar para usar) -->
+      <!--
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+        <div class="hero-logo flex-shrink-0">
+          <img src="/logo.png" alt="Scandic Legal Service" class="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain">
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800 text-left flex-1" data-i18n="hero.mainTitle">
+          Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales
+        </h1>
+      </div>
+      -->
     </div>
   </div>
+  
+  <!-- OPCIÓN 4: Logo en esquina inferior izquierda (descomentar para usar) -->
+  <!--
+  <div class="absolute bottom-8 left-8 z-20 hero-logo-corner">
+    <img src="/logo.png" alt="Scandic Legal Service" class="h-20 sm:h-24 md:h-28 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+  </div>
+  -->
+  
+  <!-- OPCIÓN 5: Logo como marca de agua (descomentar para usar) -->
+  <!--
+  <div class="absolute inset-0 z-0 hero-logo-watermark flex items-center justify-center opacity-5">
+    <img src="/logo.png" alt="Scandic Legal Service" class="h-96 w-auto object-contain">
+  </div>
+  -->
   
   <!-- Scroll indicator -->
   <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
@@ -30,17 +68,17 @@
     background-color: #faf8f5;
   }
   
-  /* Imagen de fondo - más pequeña en desktop */
+  /* Imagen de fondo - optimizada para desktop */
   .hero-background::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 55%;
     height: 100%;
-    background-image: url('/img/arneegood.png');
-    background-size: contain;
-    background-position: right center;
+    background-image: url('/img/hero1.png');
+    background-size: cover;
+    background-position: center right;
     background-repeat: no-repeat;
     z-index: 0;
   }
@@ -66,20 +104,21 @@
       display: none;
     }
     
-    /* Mostrar imagen móvil - persona centrada, recortando la izquierda */
+    /* Mostrar imagen móvil - optimizada para móvil */
     .mobile-hero-image {
       display: block;
       width: 100%;
-      height: 50vh;
-      min-height: 350px;
-      max-height: 500px;
-      background-image: url('/img/arneegood.png');
+      height: 45vh;
+      min-height: 300px;
+      max-height: 450px;
+      background-image: url('/img/hero1.png');
       background-size: cover;
-      background-position: right center;
+      background-position: center center;
       background-repeat: no-repeat;
       margin-top: 5rem; /* Espacio para el header fijo */
       margin-bottom: 2rem;
       overflow: hidden;
+      border-radius: 0;
     }
     
     #home .relative {
@@ -108,30 +147,69 @@
     }
     
     .hero-background::before {
-      width: 90%;
+      width: 65%;
+      background-size: cover;
+      background-position: center right;
     }
     
     #home h1 {
-      font-size: 4rem;
+      font-size: 2rem;
       text-align: left;
-      max-width: 52%;
+      max-width: 35%;
     }
   }
   
-  /* Desktop - imagen más pequeña */
+  /* Desktop - imagen optimizada */
   @media (min-width: 1025px) {
     #home {
       height: 100vh;
     }
     
     .hero-background::before {
-      width: 66%;
+      width: 55%;
+      background-size: cover;
+      background-position: center right;
     }
     
     #home h1 {
       text-align: left;
-      max-width: 75%;
+      max-width: 45%;
+      font-size: 2.5rem;
+      line-height: 1.3;
+      font-weight: 700;
     }
+  }
+  
+  /* Pantallas muy grandes */
+  @media (min-width: 1440px) {
+    .hero-background::before {
+      width: 50%;
+    }
+    
+    #home h1 {
+      max-width: 45%;
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+  }
+  
+  /* Estilos para el logo del hero */
+  .hero-logo {
+    animation: fadeInUp 1.2s ease-out;
+  }
+  
+  .hero-logo img {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  
+  /* Estilos para logo en esquina (Opción 4) */
+  .hero-logo-corner {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Estilos para marca de agua (Opción 5) */
+  .hero-logo-watermark {
+    pointer-events: none;
   }
   
   /* Animación de fade-in mejorada */
@@ -147,6 +225,54 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Ajustes del logo en móvil */
+  @media (max-width: 640px) {
+    .hero-logo {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    
+    .hero-logo img {
+      height: 8rem;
+      max-width: 90vw;
+    }
+  }
+  
+  /* Ajustes del logo en tablets */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .hero-logo img {
+      max-width: 400px;
+    }
+  }
+  
+  /* Ajustes del logo en desktop */
+  @media (min-width: 1025px) {
+    .hero-logo {
+      margin-top: 2rem;
+    }
+    
+    .hero-logo img {
+      max-width: 500px;
+    }
+  }
+  
+  /* Ajustes del logo en pantallas muy grandes */
+  @media (min-width: 1440px) {
+    .hero-logo img {
+      max-width: 600px;
     }
   }
 </style>

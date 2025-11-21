@@ -9,7 +9,7 @@ export const translations = {
       contact: "Contacto"
     },
     hero: {
-      mainTitle: "Ayudamos a noruegos<br>a comprar propiedades en España<br>sin sorpresas",
+      mainTitle: "Evita riesgos y ahorra tiempo en compras de propiedades, herencias y trámites fiscales",
       title: "Trámites legales en España, sin estrés ni riesgos",
       subtitle: "Asesoría experta para residentes internacionales y propietarios que quieren comprar, heredar o gestionar propiedades con seguridad y rapidez",
       description: "Más de 10 años ayudando a extranjeros a resolver sus gestiones legales en España de forma rápida y segura. Desde compraventas hasta herencias y declaraciones de impuestos, nosotros nos ocupamos de todo.",

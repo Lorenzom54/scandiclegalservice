@@ -1,0 +1,184 @@
+---
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+---
+
+<ServicePageLayout 
+  title="Herencias y Testamentos - Scandic Legal Service"
+  description="Asesoría especializada en herencias y testamentos en España para extranjeros. Redacción de testamentos, tramitación de herencias y más."
+  serviceKey="inheritance"
+>
+  <Fragment slot="breadcrumb">Herencias y Testamentos</Fragment>
+  
+  <Fragment slot="title">Herencias y Testamentos</Fragment>
+  
+  <Fragment slot="subtitle">
+    Garantiza que tu patrimonio llegue a tus herederos sin conflictos ni complicaciones
+  </Fragment>
+
+  <div class="prose prose-lg max-w-none">
+    <div class="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
+      <p class="text-lg font-semibold text-gray-800 mb-0">
+        Las herencias en España pueden ser complejas, especialmente cuando involucran a herederos de diferentes países. Te ayudamos a gestionar todo el proceso de forma eficiente y sin necesidad de viajar.
+      </p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-dark mb-6">Nuestros Servicios de Herencias</h2>
+
+    <div class="space-y-8 mb-12">
+      <!-- Servicio 1 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+        <h3 class="text-2xl font-bold text-dark mb-4">Redacción de Testamentos</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Un testamento español es fundamental si tienes propiedades en España. Acelera el proceso de herencia y evita problemas con testamentos de otros países. Te ayudamos a redactar un testamento que se ajuste a tus necesidades y a la legislación española.
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>Redacción de testamentos notariales</li>
+          <li>Asesoramiento sobre legítimas y herencias</li>
+          <li>Testamentos internacionales</li>
+          <li>Modificación o revocación de testamentos</li>
+        </ul>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+        <h3 class="text-2xl font-bold text-dark mb-4">Tramitación de Herencias</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Gestionamos todo el proceso de herencia en España: desde la obtención del certificado de últimas voluntades hasta la partición de bienes y el registro de la propiedad. Todo sin necesidad de que viajes a España.
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>Obtención del certificado de últimas voluntades</li>
+          <li>Gestión de la declaración de herederos</li>
+          <li>Liquidación del impuesto de sucesiones</li>
+          <li>Partición y adjudicación de bienes</li>
+          <li>Registro de la propiedad heredada</li>
+        </ul>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+        <h3 class="text-2xl font-bold text-dark mb-4">Certificados de Últimas Voluntades</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          El certificado de últimas voluntades es el primer paso para tramitar una herencia. Indica si el fallecido dejó testamento y dónde se encuentra. Lo obtenemos por ti de forma rápida y eficiente.
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>Solicitud del certificado de últimas voluntades</li>
+          <li>Obtención del testamento si existe</li>
+          <li>Verificación de la situación sucesoria</li>
+        </ul>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+        <h3 class="text-2xl font-bold text-dark mb-4">Partición de Bienes</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Cuando hay varios herederos, es necesario realizar la partición de bienes. Te ayudamos a llegar a un acuerdo justo entre todos los herederos y a formalizar la partición ante notario.
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+          <li>Asesoramiento en la partición de bienes</li>
+          <li>Redacción del cuaderno particional</li>
+          <li>Gestión de trámites notariales</li>
+          <li>Resolución de conflictos entre herederos</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-dark mb-6">Proceso de Herencia en España</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-xl font-bold text-primary">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark">Certificado de Últimas Voluntades</h3>
+        </div>
+        <p class="text-gray-700">Obtenemos el certificado que indica si existe testamento.</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-xl font-bold text-primary">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark">Identificación de Herederos</h3>
+        </div>
+        <p class="text-gray-700">Verificamos quiénes son los herederos según testamento o ley.</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-xl font-bold text-primary">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark">Inventario de Bienes</h3>
+        </div>
+        <p class="text-gray-700">Realizamos el inventario completo de todos los bienes y deudas.</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-xl font-bold text-primary">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark">Liquidación de Impuestos</h3>
+        </div>
+        <p class="text-gray-700">Calculamos y presentamos el impuesto de sucesiones.</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-xl font-bold text-primary">5</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark">Partición y Adjudicación</h3>
+        </div>
+        <p class="text-gray-700">Formalizamos la partición de bienes entre los herederos.</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-xl font-bold text-primary">6</span>
+          </div>
+          <h3 class="text-xl font-bold text-dark">Registro de la Propiedad</h3>
+        </div>
+        <p class="text-gray-700">Inscribimos la propiedad a nombre de los herederos.</p>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-dark mb-6">¿Por qué hacer un testamento español?</h2>
+    
+    <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg mb-8">
+      <p class="text-gray-800 mb-3"><strong>Sin testamento español, el proceso puede ser más lento y costoso:</strong></p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+        <li>Necesitas traducir y legalizar el testamento de tu país</li>
+        <li>El proceso puede tardar más tiempo</li>
+        <li>Mayor riesgo de conflictos entre herederos</li>
+        <li>Posibles problemas con la legislación española sobre legítimas</li>
+      </ul>
+    </div>
+
+    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg mb-8">
+      <p class="text-lg font-semibold text-gray-800 mb-2">✅ Con testamento español:</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
+        <li>Proceso más rápido y eficiente</li>
+        <li>Evitas problemas de interpretación entre legislaciones</li>
+        <li>Mayor seguridad jurídica para tus herederos</li>
+        <li>Puedes especificar exactamente cómo quieres repartir tus bienes</li>
+      </ul>
+    </div>
+
+    <h2 class="text-3xl font-bold text-dark mb-6">Impuesto de Sucesiones</h2>
+    
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+      <p class="text-gray-800 mb-3"><strong>Importante saber:</strong></p>
+      <p class="text-gray-700 mb-3">
+        El impuesto de sucesiones en España varía según la Comunidad Autónoma donde esté situada la propiedad. Las bonificaciones y reducciones también dependen de la relación con el causante y de la Comunidad Autónoma.
+      </p>
+      <p class="text-gray-700 mb-0">
+        <strong>Plazo de presentación:</strong> Generalmente 6 meses desde el fallecimiento, aunque puede prorrogarse. Te ayudamos a calcular el impuesto y a presentarlo en tiempo y forma.
+      </p>
+    </div>
+  </div>
+</ServicePageLayout>
+
