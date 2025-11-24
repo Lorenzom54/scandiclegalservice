@@ -31,7 +31,7 @@ const serviceIcons = {
   <Header />
   <main>
     <!-- Breadcrumb -->
-    <nav class="bg-gray-50 py-4">
+    <nav class="bg-gray-50 pt-28 pb-4 md:pt-28 lg:pt-32 xl:pt-36">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm">
           <li><a href="/" class="text-gray-500 hover:text-primary transition-colors">Inicio</a></li>
@@ -47,7 +47,7 @@ const serviceIcons = {
     <section class="py-16 bg-gradient-to-b from-primary/5 to-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-6" set:html={serviceIcons[serviceKey]} />
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-6 mt-4 md:mt-6 lg:mt-8" set:html={serviceIcons[serviceKey]} />
           <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">
             <slot name="title" />
           </h1>
