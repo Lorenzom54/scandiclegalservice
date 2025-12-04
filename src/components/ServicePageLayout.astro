@@ -34,9 +34,9 @@ const serviceIcons = {
     <nav class="bg-gray-50 pt-28 pb-4 md:pt-28 lg:pt-32 xl:pt-36">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol class="flex items-center space-x-2 text-sm">
-          <li><a href="/" class="text-gray-500 hover:text-primary transition-colors">Inicio</a></li>
+          <li><a href="/" class="text-gray-500 hover:text-primary transition-colors" data-i18n="servicePages.home">Inicio</a></li>
           <li class="text-gray-400">/</li>
-          <li><a href="/#services" class="text-gray-500 hover:text-primary transition-colors">Servicios</a></li>
+          <li><a href="/#services" class="text-gray-500 hover:text-primary transition-colors" data-i18n="servicePages.services">Servicios</a></li>
           <li class="text-gray-400">/</li>
           <li class="text-gray-800 font-medium"><slot name="breadcrumb" /></li>
         </ol>
@@ -68,12 +68,13 @@ const serviceIcons = {
     <!-- CTA Section -->
     <section class="py-16 bg-primary text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Necesitas ayuda con este servicio?</h2>
-        <p class="text-xl mb-8 text-white/90">Contacta con nosotros y te asesoraremos sin compromiso</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="servicePages.needHelp">¿Necesitas ayuda con este servicio?</h2>
+        <p class="text-xl mb-8 text-white/90" data-i18n="servicePages.contactUs">Contacta con nosotros y te asesoraremos sin compromiso</p>
         <a 
           href="https://cloud-s23.mnprogram.net/Index.aspx?frm=DAF6F06B-7DA0-49A9-B613-887B49F5B84B" 
           target="_blank"
           class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          data-i18n="servicePages.contactNow"
         >
           Contactar Ahora
         </a>

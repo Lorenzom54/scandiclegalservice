@@ -7,85 +7,89 @@ import ServicePageLayout from '../../components/ServicePageLayout.astro';
   description="Asesoría legal especializada en compraventa de propiedades en España para extranjeros. Asesoramiento hipotecario, registro de la propiedad y más."
   serviceKey="property"
 >
-  <Fragment slot="breadcrumb">Inmobiliario y Propiedades</Fragment>
+  <Fragment slot="breadcrumb">
+    <span data-i18n="servicePages.property.breadcrumb">Inmobiliario y Propiedades</span>
+  </Fragment>
   
-  <Fragment slot="title">Inmobiliario y Propiedades</Fragment>
+  <Fragment slot="title">
+    <span data-i18n="servicePages.property.title">Inmobiliario y Propiedades</span>
+  </Fragment>
   
   <Fragment slot="subtitle">
-    Asesoría legal especializada para comprar o vender propiedades en España de forma segura
+    <span data-i18n="servicePages.property.subtitle">Asesoría legal especializada para comprar o vender propiedades en España de forma segura</span>
   </Fragment>
 
   <div class="prose prose-lg max-w-none">
     <div class="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
-      <p class="text-lg font-semibold text-gray-800 mb-0">
+      <p class="text-lg font-semibold text-gray-800 mb-0" data-i18n="servicePages.property.intro">
         Comprar o vender una propiedad en España puede ser complejo, especialmente si no resides aquí. Te acompañamos en todo el proceso para garantizar que todo se haga correctamente.
       </p>
     </div>
 
-    <h2 class="text-3xl font-bold text-dark mb-6">Nuestros Servicios Inmobiliarios</h2>
+    <h2 class="text-3xl font-bold text-dark mb-6" data-i18n="servicePages.property.ourServices">Nuestros Servicios Inmobiliarios</h2>
 
     <div class="space-y-8 mb-12">
       <!-- Servicio 1 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Compraventa de Propiedades</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.property.sales.title">Compraventa de Propiedades</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.property.sales.description">
           Te asesoramos en todo el proceso de compra o venta de tu propiedad en España. Revisamos contratos, verificamos la situación legal y gestionamos el registro.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Revisión de contratos de compraventa</li>
-          <li>Verificación de cargas y gravámenes</li>
-          <li>Gestión de trámites notariales</li>
-          <li>Registro de la propiedad</li>
-          <li>Gestión de impuestos (ITP o IVA, Plusvalía)</li>
+          <li data-i18n="servicePages.property.sales.items.0">Revisión de contratos de compraventa</li>
+          <li data-i18n="servicePages.property.sales.items.1">Verificación de cargas y gravámenes</li>
+          <li data-i18n="servicePages.property.sales.items.2">Gestión de trámites notariales</li>
+          <li data-i18n="servicePages.property.sales.items.3">Registro de la propiedad</li>
+          <li data-i18n="servicePages.property.sales.items.4">Gestión de impuestos (ITP o IVA, Plusvalía)</li>
         </ul>
       </div>
 
       <!-- Servicio 2 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Asesoramiento Hipotecario</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.property.mortgage.title">Asesoramiento Hipotecario</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.property.mortgage.description">
           Si necesitas financiación, te ayudamos a entender las condiciones de las hipotecas en España y revisamos las ofertas de los bancos.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Análisis de ofertas hipotecarias</li>
-          <li>Revisión de contratos de préstamo</li>
-          <li>Asesoramiento sobre condiciones y cláusulas</li>
-          <li>Gestión de cancelación de hipotecas</li>
+          <li data-i18n="servicePages.property.mortgage.items.0">Análisis de ofertas hipotecarias</li>
+          <li data-i18n="servicePages.property.mortgage.items.1">Revisión de contratos de préstamo</li>
+          <li data-i18n="servicePages.property.mortgage.items.2">Asesoramiento sobre condiciones y cláusulas</li>
+          <li data-i18n="servicePages.property.mortgage.items.3">Gestión de cancelación de hipotecas</li>
         </ul>
       </div>
 
       <!-- Servicio 3 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Registro de la Propiedad</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.property.registry.title">Registro de la Propiedad</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.property.registry.description">
           Gestionamos todos los trámites relacionados con el Registro de la Propiedad: inscripción de compraventas, cancelación de hipotecas y anotaciones preventivas.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Inscripción de compraventas</li>
-          <li>Cancelación de cargas y gravámenes</li>
-          <li>Obtención de notas simples</li>
-          <li>Anotaciones preventivas</li>
+          <li data-i18n="servicePages.property.registry.items.0">Inscripción de compraventas</li>
+          <li data-i18n="servicePages.property.registry.items.1">Cancelación de cargas y gravámenes</li>
+          <li data-i18n="servicePages.property.registry.items.2">Obtención de notas simples</li>
+          <li data-i18n="servicePages.property.registry.items.3">Anotaciones preventivas</li>
         </ul>
       </div>
 
       <!-- Servicio 4 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Licencias y Permisos</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.property.licenses.title">Licencias y Permisos</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.property.licenses.description">
           Te ayudamos a obtener las licencias y permisos necesarios para obras o cambios de uso en tu propiedad.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Licencias de obras</li>
-          <li>Cambios de uso de la propiedad</li>
-          <li>Licencias de apertura de negocios</li>
-          <li>Gestión de trámites municipales</li>
+          <li data-i18n="servicePages.property.licenses.items.0">Licencias de obras</li>
+          <li data-i18n="servicePages.property.licenses.items.1">Cambios de uso de la propiedad</li>
+          <li data-i18n="servicePages.property.licenses.items.2">Licencias de apertura de negocios</li>
+          <li data-i18n="servicePages.property.licenses.items.3">Gestión de trámites municipales</li>
         </ul>
       </div>
     </div>
 
     <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-      <p class="text-lg font-semibold text-gray-800 mb-2">💡 Ventaja Clave</p>
-      <p class="text-gray-700 mb-0">
+      <p class="text-lg font-semibold text-gray-800 mb-2" data-i18n="servicePages.property.tip.title">💡 Ventaja Clave</p>
+      <p class="text-gray-700 mb-0" data-i18n="servicePages.property.tip.text">
         <strong>No necesitas viajar a España para comprar:</strong> Con un poder notarial apostillado, podemos realizar todos los trámites por ti.
       </p>
     </div>

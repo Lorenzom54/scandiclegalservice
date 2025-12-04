@@ -7,84 +7,88 @@ import ServicePageLayout from '../../components/ServicePageLayout.astro';
   description="Asesoría especializada en herencias y testamentos en España para extranjeros. Redacción de testamentos, tramitación de herencias y más."
   serviceKey="inheritance"
 >
-  <Fragment slot="breadcrumb">Herencias y Testamentos</Fragment>
+  <Fragment slot="breadcrumb">
+    <span data-i18n="servicePages.inheritance.breadcrumb">Herencias y Testamentos</span>
+  </Fragment>
   
-  <Fragment slot="title">Herencias y Testamentos</Fragment>
+  <Fragment slot="title">
+    <span data-i18n="servicePages.inheritance.title">Herencias y Testamentos</span>
+  </Fragment>
   
   <Fragment slot="subtitle">
-    Garantiza que tu patrimonio llegue a tus herederos sin conflictos ni complicaciones
+    <span data-i18n="servicePages.inheritance.subtitle">Garantiza que tu patrimonio llegue a tus herederos sin conflictos ni complicaciones</span>
   </Fragment>
 
   <div class="prose prose-lg max-w-none">
     <div class="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
-      <p class="text-lg font-semibold text-gray-800 mb-0">
+      <p class="text-lg font-semibold text-gray-800 mb-0" data-i18n="servicePages.inheritance.intro">
         Las herencias en España pueden ser complejas, especialmente cuando involucran a herederos de diferentes países. Te ayudamos a gestionar todo el proceso de forma eficiente y sin necesidad de viajar.
       </p>
     </div>
 
-    <h2 class="text-3xl font-bold text-dark mb-6">Nuestros Servicios de Herencias</h2>
+    <h2 class="text-3xl font-bold text-dark mb-6" data-i18n="servicePages.inheritance.ourServices">Nuestros Servicios de Herencias</h2>
 
     <div class="space-y-8 mb-12">
       <!-- Servicio 1 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Redacción de Testamentos</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.inheritance.wills.title">Redacción de Testamentos</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.inheritance.wills.description">
           Un testamento español es fundamental si tienes propiedades en España. Te ayudamos a redactar un testamento que se ajuste a tus necesidades y a la legislación española.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Redacción de testamentos notariales</li>
-          <li>Asesoramiento sobre legítimas y herencias</li>
-          <li>Testamentos internacionales</li>
-          <li>Modificación o revocación de testamentos</li>
+          <li data-i18n="servicePages.inheritance.wills.items.0">Redacción de testamentos notariales</li>
+          <li data-i18n="servicePages.inheritance.wills.items.1">Asesoramiento sobre legítimas y herencias</li>
+          <li data-i18n="servicePages.inheritance.wills.items.2">Testamentos internacionales</li>
+          <li data-i18n="servicePages.inheritance.wills.items.3">Modificación o revocación de testamentos</li>
         </ul>
       </div>
 
       <!-- Servicio 2 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Tramitación de Herencias</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.inheritance.processing.title">Tramitación de Herencias</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.inheritance.processing.description">
           Gestionamos todo el proceso de herencia en España sin necesidad de que viajes.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Obtención del certificado de últimas voluntades</li>
-          <li>Gestión de la declaración de herederos</li>
-          <li>Liquidación del impuesto de sucesiones</li>
-          <li>Partición y adjudicación de bienes</li>
-          <li>Registro de la propiedad heredada</li>
+          <li data-i18n="servicePages.inheritance.processing.items.0">Obtención del certificado de últimas voluntades</li>
+          <li data-i18n="servicePages.inheritance.processing.items.1">Gestión de la declaración de herederos</li>
+          <li data-i18n="servicePages.inheritance.processing.items.2">Liquidación del impuesto de sucesiones</li>
+          <li data-i18n="servicePages.inheritance.processing.items.3">Partición y adjudicación de bienes</li>
+          <li data-i18n="servicePages.inheritance.processing.items.4">Registro de la propiedad heredada</li>
         </ul>
       </div>
 
       <!-- Servicio 3 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Certificados de Últimas Voluntades</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.inheritance.certificates.title">Certificados de Últimas Voluntades</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.inheritance.certificates.description">
           El certificado de últimas voluntades indica si el fallecido dejó testamento y dónde se encuentra.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Solicitud del certificado de últimas voluntades</li>
-          <li>Obtención del testamento si existe</li>
-          <li>Verificación de la situación sucesoria</li>
+          <li data-i18n="servicePages.inheritance.certificates.items.0">Solicitud del certificado de últimas voluntades</li>
+          <li data-i18n="servicePages.inheritance.certificates.items.1">Obtención del testamento si existe</li>
+          <li data-i18n="servicePages.inheritance.certificates.items.2">Verificación de la situación sucesoria</li>
         </ul>
       </div>
 
       <!-- Servicio 4 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Partición de Bienes</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.inheritance.division.title">Partición de Bienes</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.inheritance.division.description">
           Cuando hay varios herederos, es necesario realizar la partición de bienes. Te ayudamos a formalizar la partición ante notario.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Asesoramiento en la partición de bienes</li>
-          <li>Redacción del cuaderno particional</li>
-          <li>Gestión de trámites notariales</li>
-          <li>Resolución de conflictos entre herederos</li>
+          <li data-i18n="servicePages.inheritance.division.items.0">Asesoramiento en la partición de bienes</li>
+          <li data-i18n="servicePages.inheritance.division.items.1">Redacción del cuaderno particional</li>
+          <li data-i18n="servicePages.inheritance.division.items.2">Gestión de trámites notariales</li>
+          <li data-i18n="servicePages.inheritance.division.items.3">Resolución de conflictos entre herederos</li>
         </ul>
       </div>
     </div>
 
     <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-      <p class="text-lg font-semibold text-gray-800 mb-2">✅ Ventajas de un testamento español:</p>
-      <p class="text-gray-700 mb-0">
+      <p class="text-lg font-semibold text-gray-800 mb-2" data-i18n="servicePages.inheritance.tip.title">✅ Ventajas de un testamento español:</p>
+      <p class="text-gray-700 mb-0" data-i18n="servicePages.inheritance.tip.text">
         Proceso más rápido, evitas problemas de interpretación entre legislaciones y mayor seguridad jurídica para tus herederos.
       </p>
     </div>

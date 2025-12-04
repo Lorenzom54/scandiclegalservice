@@ -7,86 +7,90 @@ import ServicePageLayout from '../../components/ServicePageLayout.astro';
   description="Servicios legales adicionales para extranjeros en España: obtención de NIE, poderes notariales, disolución de sociedades y más."
   serviceKey="general"
 >
-  <Fragment slot="breadcrumb">Otros Servicios Esenciales</Fragment>
+  <Fragment slot="breadcrumb">
+    <span data-i18n="servicePages.general.breadcrumb">Otros Servicios Esenciales</span>
+  </Fragment>
   
-  <Fragment slot="title">Otros Servicios Esenciales</Fragment>
+  <Fragment slot="title">
+    <span data-i18n="servicePages.general.title">Otros Servicios Esenciales</span>
+  </Fragment>
   
   <Fragment slot="subtitle">
-    Gestiones legales que parecen complicadas pero que nosotros hacemos sencillas para ti
+    <span data-i18n="servicePages.general.subtitle">Gestiones legales que parecen complicadas pero que nosotros hacemos sencillas para ti</span>
   </Fragment>
 
   <div class="prose prose-lg max-w-none">
     <div class="bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg mb-8">
-      <p class="text-lg font-semibold text-gray-800 mb-0">
+      <p class="text-lg font-semibold text-gray-800 mb-0" data-i18n="servicePages.general.intro">
         Además de nuestros servicios principales, te ayudamos con otras gestiones legales esenciales que necesitas para operar en España como extranjero.
       </p>
     </div>
 
-    <h2 class="text-3xl font-bold text-dark mb-6">Nuestros Servicios Adicionales</h2>
+    <h2 class="text-3xl font-bold text-dark mb-6" data-i18n="servicePages.general.ourServices">Nuestros Servicios Adicionales</h2>
 
     <div class="space-y-8 mb-12">
       <!-- Servicio 1 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Obtención de NIE</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.general.nie.title">Obtención de NIE</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.general.nie.description">
           El NIE (Número de Identificación de Extranjero) es obligatorio para cualquier trámite en España. Te ayudamos a obtenerlo de forma rápida y sin complicaciones.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Solicitud del NIE</li>
-          <li>Preparación de documentación necesaria</li>
-          <li>Gestión de citas con la Policía Nacional</li>
-          <li>Renovación de NIE</li>
+          <li data-i18n="servicePages.general.nie.items.0">Solicitud del NIE</li>
+          <li data-i18n="servicePages.general.nie.items.1">Preparación de documentación necesaria</li>
+          <li data-i18n="servicePages.general.nie.items.2">Gestión de citas con la Policía Nacional</li>
+          <li data-i18n="servicePages.general.nie.items.3">Renovación de NIE</li>
         </ul>
       </div>
 
       <!-- Servicio 2 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Poderes Notariales</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.general.powers.title">Poderes Notariales</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.general.powers.description">
           Si no puedes estar presente en España, podemos actuar en tu nombre mediante un poder notarial. Te ayudamos a redactar el poder adecuado y a gestionar su apostilla.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Redacción de poderes notariales</li>
-          <li>Poderes generales y específicos</li>
-          <li>Gestión de apostillas</li>
-          <li>Poderes para compraventa y herencias</li>
+          <li data-i18n="servicePages.general.powers.items.0">Redacción de poderes notariales</li>
+          <li data-i18n="servicePages.general.powers.items.1">Poderes generales y específicos</li>
+          <li data-i18n="servicePages.general.powers.items.2">Gestión de apostillas</li>
+          <li data-i18n="servicePages.general.powers.items.3">Poderes para compraventa y herencias</li>
         </ul>
       </div>
 
       <!-- Servicio 3 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Disolución de Sociedades</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.general.dissolution.title">Disolución de Sociedades</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.general.dissolution.description">
           Te ayudamos a disolver correctamente tu sociedad en España, gestionando todos los trámites administrativos y fiscales necesarios.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Preparación de la junta de disolución</li>
-          <li>Liquidación de la sociedad</li>
-          <li>Cancelación de deudas y obligaciones</li>
-          <li>Baja en Hacienda y Seguridad Social</li>
-          <li>Cancelación en el Registro Mercantil</li>
+          <li data-i18n="servicePages.general.dissolution.items.0">Preparación de la junta de disolución</li>
+          <li data-i18n="servicePages.general.dissolution.items.1">Liquidación de la sociedad</li>
+          <li data-i18n="servicePages.general.dissolution.items.2">Cancelación de deudas y obligaciones</li>
+          <li data-i18n="servicePages.general.dissolution.items.3">Baja en Hacienda y Seguridad Social</li>
+          <li data-i18n="servicePages.general.dissolution.items.4">Cancelación en el Registro Mercantil</li>
         </ul>
       </div>
 
       <!-- Servicio 4 -->
       <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold text-dark mb-4">Asesoramiento General</h3>
-        <p class="text-gray-700 mb-4 leading-relaxed">
+        <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="servicePages.general.advice.title">Asesoramiento General</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed" data-i18n="servicePages.general.advice.description">
           Te ofrecemos asesoramiento legal general sobre cualquier aspecto relacionado con tus intereses en España.
         </p>
         <ul class="list-disc list-inside text-gray-700 space-y-2 ml-4">
-          <li>Consultas legales puntuales</li>
-          <li>Asesoramiento sobre obligaciones fiscales</li>
-          <li>Asesoramiento sobre derechos y obligaciones como propietario</li>
-          <li>Revisión de contratos y documentos</li>
-          <li>Asesoramiento sobre residencia fiscal</li>
+          <li data-i18n="servicePages.general.advice.items.0">Consultas legales puntuales</li>
+          <li data-i18n="servicePages.general.advice.items.1">Asesoramiento sobre obligaciones fiscales</li>
+          <li data-i18n="servicePages.general.advice.items.2">Asesoramiento sobre derechos y obligaciones como propietario</li>
+          <li data-i18n="servicePages.general.advice.items.3">Revisión de contratos y documentos</li>
+          <li data-i18n="servicePages.general.advice.items.4">Asesoramiento sobre residencia fiscal</li>
         </ul>
       </div>
     </div>
 
     <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg">
-      <p class="text-lg font-semibold text-gray-800 mb-2">💡 Consejo Profesional</p>
-      <p class="text-gray-700 mb-0">
+      <p class="text-lg font-semibold text-gray-800 mb-2" data-i18n="servicePages.general.tip.title">💡 Consejo Profesional</p>
+      <p class="text-gray-700 mb-0" data-i18n="servicePages.general.tip.text">
         Con un poder notarial apostillado, puedes realizar prácticamente cualquier trámite en España sin necesidad de viajar.
       </p>
     </div>
